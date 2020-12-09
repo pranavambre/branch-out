@@ -81,7 +81,7 @@
                     <img class="" src="{{entry.featuredImage.one().getUrl('largeFeatureImage') }}" alt="">
                    
                 </picture>
-                  <div class="centered""400"><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration=>IMMERSIVE ACTIVITIES</H1></div>
+                  <div class="centered""400"><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration="200">IMMERSIVE ACTIVITIES</H1></div>
             </div>
             <div class="col-lg-4 pl-0 pr-0 banner-img">
               <picture>
@@ -91,7 +91,7 @@
                     <img class="" src="{{ entry.featuredImage.nth(1).getUrl('largeFeatureImage1') }}" alt="" >
                     
                 </picture>
-                <div class="centered" ><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration=>INCRIDIBLE PLACES</H1></div>
+                <div class="centered" ><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration="200">INCRIDIBLE PLACES</H1></div>
             </div>
             <div class="col-lg-4 pl-0 pr-0 banner-img">
                   <picture>
@@ -101,7 +101,7 @@
                     <img class="" src="{{ entry.featuredImage.nth(2).getUrl('largeFeatureImage2') }}" alt="">
                     
                 </picture>
-                <div class="centered"><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration=>CURATED PACKAGES</H1></div>
+                <div class="centered"><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration="200">CURATED PACKAGES</H1></div>
             </div>
         </div>
     </div>
@@ -155,16 +155,16 @@
   
             <div class="col-lg-7 col-md-12 section2-Images">
 
-                <picture>
+               <picture>
                     <source srcset="{{ entry.imageStack.nth(1).url('section2Images') }}" media="(min-width: 1000px)">
                     <source srcset="{{ entry.imageStack.nth(1).url('section2Images') }}" media="(min-width: 600px)">
-                    <img class="" src="{{ entry.imageStack.nth(1).getUrl('section2Images') }}" alt=""  width="80%"> 
+                    <img  class="" data-aos="slide-right" data-aos-delay="200" data-aos-duration="200" src="{{ entry.imageStack.nth(1).getUrl('section2Images') }}" alt=""  width="80%"> 
                 </picture>
 
                   <picture>
                     <source srcset="{{ entry.imageStack.one().url('section2Images') }}" media="(min-width: 1000px)">
                     <source srcset="{{ entry.imageStack.one().url('section2Images') }}" media="(min-width: 600px)">
-                    <img class="" src="{{ entry.imageStack.one().getUrl('section2Images') }}" alt=""  width="80%"> 
+                    <img class="" data-aos="slide-right" data-aos-delay="200" data-aos-duration="200" src="{{ entry.imageStack.one().getUrl('section2Images') }}" alt=""  width="80%"> 
                 </picture>
 
                 <picture>
@@ -241,7 +241,12 @@
     <div class="slider stick-dots">
         <div class="slide">
             <div class="slide__img">
-                <img src="{{entry.carousel.one().getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+                 <picture>
+                        <source srcset="{{ entry.carousel.one().url('carouselTransformDesktopExtraLarge') }}" media="(min-width: 2000px)">
+                       
+                        <img src="{{entry.carousel.one().getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+                </picture>
+                
             </div>
             <div class="slide__content slide__content__left">
                 <div class="slide__content--headings text-left">
@@ -254,7 +259,11 @@
 
         <div class="slide">
             <div class="slide__img">
-                <img src="{{entry.carousel.nth(1).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+                 <picture>
+                        <source srcset="{{ entry.carousel.nth(1).url('carouselTransformDesktopExtraLarge') }}" media="(min-width: 2000px)">
+                         <img src="{{entry.carousel.nth(1).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+                </picture>
+               
             </div>
             <div class="slide__content slide__content__left">
                 <div class="slide__content--headings text-left">
@@ -267,7 +276,11 @@
 
         <div class="slide">
             <div class="slide__img">
-            <img src="{{entry.carousel.nth(2).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+             <picture>
+                        <source srcset="{{ entry.carousel.nth(2).url('carouselTransformDesktopExtraLarge') }}" media="(min-width: 2000px)">
+                         <img src="{{entry.carousel.nth(2).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+                </picture>
+            
             </div>
             <div class="slide__content slide__content__left">
                 <div class="slide__content--headings text-left">
@@ -280,7 +293,11 @@
 
         <div class="slide">
             <div class="slide__img">
-            <img src="{{entry.carousel.nth(3).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+            <picture>
+                 <source srcset="{{ entry.carousel.nth(3).url('carouselTransformDesktopExtraLarge') }}" media="(min-width: 2000px)">
+                <img src="{{entry.carousel.nth(3).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />       
+            </picture>
+            
             </div>
             <div class="slide__content slide__content__left">
                 <div class="slide__content--headings text-left">
@@ -293,7 +310,10 @@
 
         <div class="slide">
             <div class="slide__img">
-            <img src="{{entry.carousel.nth(4).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+            <picture>
+                 <source srcset="{{ entry.carousel.nth(4).url('carouselTransformDesktopExtraLarge') }}" media="(min-width: 2000px)">
+                <img src="{{entry.carousel.nth(4).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />       
+            </picture>
             </div>
             <div class="slide__content slide__content__left">
                 <div class="slide__content--headings text-left">
@@ -306,7 +326,10 @@
 
         <div class="slide">
             <div class="slide__img">
-            <img src="{{entry.carousel.nth(5).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+            <picture>
+                 <source srcset="{{ entry.carousel.nth(5).url('carouselTransformDesktopExtraLarge') }}" media="(min-width: 2000px)">
+                <img src="{{entry.carousel.nth(5).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />       
+            </picture>
             </div>
             <div class="slide__content slide__content__left">
                 <div class="slide__content--headings text-left">
@@ -341,14 +364,14 @@
 
 
 <div class="container-fluid badge_div ">
- <img src="{{siteUrl}}assets/icons_logo/branchout-badge.svg" width="20%"> 
+ <img  data-aos="fade-up" data-aos-delay="200" data-aos-duration="200" src="{{siteUrl}}assets/icons_logo/branchout-badge.svg" width="20%"> 
  
 
     <div class="container text-center section5">
     <div class="row">
         <div class="col-lg-2">
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-8"  data-aos="slide-right" data-aos-delay="200" data-aos-duration="200">
          <h2>READY TO START YOUR ADVENTURE?</h2>
     <p>Start by picking your desired <u class="dotted">activity</u>, <u class="dotted">destination</u>, <u class="dotted">package</u> or <u class="dotted">contact us</u> and we'll tailor something really special that perfectly suits your needs.</p>
 
