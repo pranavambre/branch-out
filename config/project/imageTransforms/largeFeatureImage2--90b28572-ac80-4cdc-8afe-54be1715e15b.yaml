@@ -1,0 +1,9 @@
+format: null
+handle: largeFeatureImage2
+height: 800
+interlace: none
+mode: crop
+name: 'Large feature Image 2'
+position: bottom-right
+quality: null
+width: 700

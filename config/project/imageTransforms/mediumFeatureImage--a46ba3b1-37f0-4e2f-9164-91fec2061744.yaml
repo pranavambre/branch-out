@@ -1,0 +1,9 @@
+format: null
+handle: mediumFeatureImage
+height: 525
+interlace: none
+mode: crop
+name: 'medium feature image'
+position: center-right
+quality: null
+width: 1000

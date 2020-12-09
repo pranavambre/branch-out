@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Welcome to Craft CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="{{ siteUrl }}assets/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="{{ siteUrl }}assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ siteUrl }}assets/owl.theme.default.min.css">
+     {# <link rel="stylesheet" href="{{ siteUrl }}assets/docs.theme.min.css"> #}
+    <link rel="stylesheet" href="{{ siteUrl }}assets/style.css">
+</head>
+<body>
+<div class="">
+    <nav class="navbar ftco-navbar-light navbar-expand-lg navbar-dark bg-dark">
+
+    <!--  Show this only on mobile to medium screens  -->
+
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><svg viewBox="0 0 100 80" width="40" height="20">
+        <rect y="50" width="100" height="10" rx="3"></rect>
+        </svg></span>
+    </button>
+    <a class="navbar-brand d-lg-none"  href="#"> <img class="banner-img-logo" src="{{ siteUrl }}assets/icons_logo/branchout-logo.svg" alt="" width="40%" ></a>
+    <a class="social-media-icon">
+    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+    <i class="fa fa-twitter" aria-hidden="true"></i>
+    <i class="fa fa-instagram" aria-hidden="true"></i>
+    </a>
+    
+
+    <!--  Use flexbox utility classes to change how the child elements are justified  -->
+    <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
+
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Activities</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Places</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Packages</a>
+        </li>
+        </ul>
+        
+        
+    <!--   Show this only lg screens and up   -->
+        <a class="navbar-brand d-none d-lg-block" href="#"> <img class="banner-img-logo" src="{{ siteUrl }}assets/icons_logo/branchout-logo.svg" alt="" width="60%" ></a>
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">FAQ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">BLOG</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+        </li>
+        </ul>
+    </div>
+    </nav>
+    </div>
+
+
+    <div class="container-fluid  banner-div  mb-5">
+        <div class ="row">
+            <div class="col-lg-4 pl-0 pr-0 banner-img">
+                <picture>
+                    <source srcset="{{ entry.featuredImage.one().url('extraLargeFeatureImage') }}" media="(min-width: 1600px)">
+                    <source srcset="{{ entry.featuredImage.one().url('largeFeatureImage') }}" media="(min-width: 1000px)">
+                    <source srcset="{{ entry.featuredImage.one().url('mediumFeatureImage') }}" media="(min-width: 600px)">
+                    <img class="" src="{{entry.featuredImage.one().getUrl('largeFeatureImage') }}" alt="">
+                   
+                </picture>
+                  <div class="centered""400"><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration=>IMMERSIVE ACTIVITIES</H1></div>
+            </div>
+            <div class="col-lg-4 pl-0 pr-0 banner-img">
+              <picture>
+                     <source srcset="{{ entry.featuredImage.nth(1).url('extraLargeFeatureImage') }}" media="(min-width: 1600px)">
+                    <source srcset="{{ entry.featuredImage.nth(1).url('largeFeatureImage1') }}" media="(min-width: 1000px)">
+                    <source srcset="{{ entry.featuredImage.nth(1).url('mediumFeatureImage1') }}" media="(min-width: 600px)">
+                    <img class="" src="{{ entry.featuredImage.nth(1).getUrl('largeFeatureImage1') }}" alt="" >
+                    
+                </picture>
+                <div class="centered" ><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration=>INCRIDIBLE PLACES</H1></div>
+            </div>
+            <div class="col-lg-4 pl-0 pr-0 banner-img">
+                  <picture>
+                   <source srcset="{{ entry.featuredImage.nth(2).url('extraLargeFeatureImage') }}" media="(min-width: 1600px)">
+                    <source srcset="{{ entry.featuredImage.nth(2).url('largeFeatureImage2') }}" media="(min-width: 1000px)">
+                    <source srcset="{{entry.featuredImage.nth(2).url('mediumFeatureImage2') }}" media="(min-width: 600px)">
+                    <img class="" src="{{ entry.featuredImage.nth(2).getUrl('largeFeatureImage2') }}" alt="">
+                    
+                </picture>
+                <div class="centered"><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration=>CURATED PACKAGES</H1></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="banner-div-mobile carousel slide " data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active banner-img-mobile">
+                <picture>
+                        <source srcset="{{ entry.featuredImage.one().url('largeFeatureImage') }}" media="(min-width: 1000px)">
+                        <source srcset="{{ entry.featuredImage.one().url('mediumFeatureImage') }}" media="(min-width: 600px)">
+                        <img class="" src="{{entry.featuredImage.one().getUrl('mobileCarousel') }}" alt="" width="100%">
+                        <div class="centered""400"><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration=>IMMERSIVE ACTIVITIES</H1></div>
+                </picture>
+            </div>
+            <div class="carousel-item banner-img-mobile">
+                 <picture>
+                        <source srcset="{{ entry.featuredImage.nth(1).url('largeFeatureImage1') }}" media="(min-width: 1000px)">
+                        <source srcset="{{ entry.featuredImage.nth(1).url('mediumFeatureImage1') }}" media="(min-width: 600px)">
+                        <img class="" src="{{ entry.featuredImage.nth(1).getUrl('mobileCarousel') }}" alt=""  width="100%">
+                        <div class="centered" ><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration=>INCRIDIBLE PLACES</H1></div>
+                </picture>
+            </div>
+            <div class="carousel-item banner-img-mobile">
+                 <picture>
+                        <source srcset="{{ entry.featuredImage.nth(2).url('largeFeatureImage2') }}" media="(min-width: 1000px)">
+                        <source srcset="{{entry.featuredImage.nth(2).url('mediumFeatureImage2') }}" media="(min-width: 600px)">
+                        <img class="" src="{{ entry.featuredImage.nth(2).getUrl('mobileCarousel') }}" alt=""  width="100%">
+                        <div class="centered"><H1  data-aos="fade-up" data-aos-delay="200" data-aos-duration=>CURATED PACKAGES</H1></div>
+                </picture>
+            </div>
+        </div>
+       
+    </div>
+
+    
+
+    <div class="container section2-container pt-5 mb-5">
+        <div class="row">
+
+            <div class="col-lg-5 col-md-12 p-5 section2">
+                <h2 class="section2-h2"> CONNECTING PEOPLE AND PLACES THROUGH AMAZING JOURNEY</h2>
+                <p>We harness the power of nature and travel to help people get rebalanced, reinvigorated, and reconnect with what really matters in life.</p>
+                <p> &nbsp; Our main goal is to take you out of the grind of daily life and help you experience exceptional places, incredible moments, and life-changing connections</p>
+            </div>
+
+  
+            <div class="col-lg-7 col-md-12 section2-Images">
+
+                <picture>
+                    <source srcset="{{ entry.imageStack.nth(1).url('section2Images') }}" media="(min-width: 1000px)">
+                    <source srcset="{{ entry.imageStack.nth(1).url('section2Images') }}" media="(min-width: 600px)">
+                    <img class="" src="{{ entry.imageStack.nth(1).getUrl('section2Images') }}" alt=""  width="80%"> 
+                </picture>
+
+                  <picture>
+                    <source srcset="{{ entry.imageStack.one().url('section2Images') }}" media="(min-width: 1000px)">
+                    <source srcset="{{ entry.imageStack.one().url('section2Images') }}" media="(min-width: 600px)">
+                    <img class="" src="{{ entry.imageStack.one().getUrl('section2Images') }}" alt=""  width="80%"> 
+                </picture>
+
+                <picture>
+                    <source srcset="{{ entry.imageStack.nth(2).url('section2Images') }}" media="(min-width: 1000px)">
+                    <source srcset="{{ entry.imageStack.nth(2).url('section2Images') }}" media="(min-width: 600px)">
+                    <img class="" src="{{ entry.imageStack.nth(2).getUrl('section2Images') }}" alt=""  width="30%"> 
+                </picture>
+
+            </div> 
+        </div>
+    </div>
+
+    <div class="container section3 pt-5 mb-5">
+        <div class="row">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-2">
+                <img class="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400" src="{{ entry.branchIcon.one().getUrl('branchIconTransform') }}" alt="" >
+                <h3 class="section3-h3 pt-4">INTIMATE GROUP</h3>
+            </div>
+             <div class="col-lg-2">
+                <img class=""  data-aos="fade-up" data-aos-delay="200" data-aos-duration="400"  src="{{ entry.branchIcon.nth(1).getUrl('branchIconTransform') }}" alt="" >
+                <h3 class="section3-h3 pt-4">PREMIUM ACCOMODATION</h3>
+            </div>
+             <div class="col-lg-2">
+                <img class=""  data-aos="fade-up" data-aos-delay="200" data-aos-duration="400"  src="{{ entry.branchIcon.nth(2).getUrl('branchIconTransform') }}" alt="" >
+                <h3 class="section3-h3 pt-4">LUXURY EXPERIENCE IN LOCAL COMMUNITIES</h3>
+            </div>
+             <div class="col-lg-2">
+                  <img class=""  data-aos="fade-up" data-aos-delay="200" data-aos-duration="400"  src="{{ entry.branchIcon.nth(3).getUrl('branchIconTransform') }}" alt="" >
+                  <h3 class="section3-h3 pt-4">VIP OPTIONS</h3>
+            </div>
+             <div class="col-lg-2">
+                  <img class=""  data-aos="fade-up" data-aos-delay="200" data-aos-duration="400"  src="{{ entry.branchIcon.nth(4).getUrl('branchIconTransform') }}" alt="" >
+                  <h3 class="section3-h3 pt-4">LOCAL GUIDES REAL CONNECTIONS</h3>
+            </div>
+            <div class="col-lg-1">
+            </div>
+        </div>
+    </div>
+
+ <div class="large-12 columns ">
+    <div class=" section3-mobile owl-carousel owl-theme">
+    <div class="item">
+          <img class="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400" src="{{ entry.branchIcon.one().getUrl('branchIconMobile') }}" alt=""  >
+          <h3 class="section3-h3 pt-4">INTIMATE GROUP</h3>
+    </div>
+    <div class="item">
+         <img class=""  data-aos="fade-up" data-aos-delay="200" data-aos-duration="400"  src="{{ entry.branchIcon.nth(1).getUrl('branchIconMobile') }}" alt="">
+         <h3 class="section3-h3 pt-4">PREMIUM ACCOMODATION</h3>   
+    </div>
+    <div class="item">
+         <img class=""  data-aos="fade-up" data-aos-delay="200" data-aos-duration="400"  src="{{ entry.branchIcon.nth(2).getUrl('branchIconMobile') }}" alt="">
+         <h3 class="section3-h3 pt-4">LUXURY EXPERIENCE IN LOCAL COMMUNITIES</h3>
+           
+    </div>
+    <div class="item">
+          <img class=""  data-aos="fade-up" data-aos-delay="200" data-aos-duration="400"  src="{{ entry.branchIcon.nth(3).getUrl('branchIconMobile') }}" alt="" >
+          <h3 class="section3-h3 pt-4">VIP OPTIONS</h3>   
+    </div>
+    <div class="item">
+        <img class=""  data-aos="fade-up" data-aos-delay="200" data-aos-duration="400"  src="{{ entry.branchIcon.nth(4).getUrl('branchIconMobile') }}" alt="" >
+        <h3 class="section3-h3 pt-4">LOCAL GUIDES REAL CONNECTIONS</h3>
+    </div>
+    </div>
+</div>
+
+
+<div class="container section4">
+    <h5>SECTION A</h5>
+    <h2>TOURS & PACKAGES</h2>
+</div>
+    <div class="banner__slider">
+    <div class="slider stick-dots">
+        <div class="slide">
+            <div class="slide__img">
+                <img src="{{entry.carousel.one().getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+            </div>
+            <div class="slide__content slide__content__left">
+                <div class="slide__content--headings text-left">
+                    <h5  class="animated top-title" data-animation-in="fadeInUp" data-delay-in="0.3">4 NIGHTS /3 DAYS</h5>
+                    <h2 class="animated title" data-animation-in="fadeInUp">THE ICONS OF TASMANIA</h2>
+                    <button  class="btn-light btn button-custom animated" data-animation-in="fadeInUp">Explore Details <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide__img">
+                <img src="{{entry.carousel.nth(1).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+            </div>
+            <div class="slide__content slide__content__left">
+                <div class="slide__content--headings text-left">
+                    <h5 class="animated top-title" data-animation-in="fadeInLeft" data-delay-in="0.2">2 NIGHTS /3 DAYS</h5>
+                    <h2 class="animated title" data-animation-in="fadeInLeft">THE ICONS OF TASMANIA</h2>
+                    <button  class="btn-light btn button-custom animated" data-animation-in="fadeInUp">Explore Details <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide__img">
+            <img src="{{entry.carousel.nth(2).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+            </div>
+            <div class="slide__content slide__content__left">
+                <div class="slide__content--headings text-left">
+                    <h5 class="animated top-title" data-animation-in="fadeInRight" data-delay-in="0.2">5 NIGHTS /6 DAYS</h5>
+                    <h2 class="animated title" data-animation-in="fadeInRight">THE ICONS OF TASMANIA</h2>
+                    <button  class="btn-light btn button-custom animated" data-animation-in="fadeInUp">Explore Details <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide__img">
+            <img src="{{entry.carousel.nth(3).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+            </div>
+            <div class="slide__content slide__content__left">
+                <div class="slide__content--headings text-left">
+                    <h5 class="animated top-title" data-animation-in="fadeInRight" data-delay-in="0.2">5 NIGHTS /6 DAYS</h5>
+                    <h2 class="animated title" data-animation-in="fadeInRight">THE ICONS OF TASMANIA</h2>
+                    <button  class="btn-light btn button-custom animated" data-animation-in="fadeInUp">Explore Details <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide__img">
+            <img src="{{entry.carousel.nth(4).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+            </div>
+            <div class="slide__content slide__content__left">
+                <div class="slide__content--headings text-left">
+                    <h5 class="animated top-title" data-animation-in="fadeInRight" data-delay-in="0.2">5 NIGHTS /6 DAYS</h5>
+                    <h2 class="animated title" data-animation-in="fadeInRight">THE ICONS OF TASMANIA</h2>
+                    <button  class="btn-light btn button-custom animated" data-animation-in="fadeInUp">Explore Details <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide__img">
+            <img src="{{entry.carousel.nth(5).getUrl('carouselTransformDesktop') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+            </div>
+            <div class="slide__content slide__content__left">
+                <div class="slide__content--headings text-left">
+                    <h5 class="animated top-title" data-animation-in="fadeInRight" data-delay-in="0.2">5 NIGHTS /6 DAYS</h5>
+                    <h2 class="animated title" data-animation-in="fadeInRight">THE ICONS OF TASMANIA</h2>
+                    <button  class="btn-light btn button-custom animated" data-animation-in="fadeInUp">Explore Details <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle" fill="none" stroke="currentColor">
+        <circle r="20" cy="22" cx="22" id="test">
+    </symbol>
+    </svg>
+</div>
+
+<div class="sectionA-mobile">
+     <div class="slide">
+            <div class="slide__img">
+                <img src="{{entry.carousel.one().getUrl('mobileCarousel') }}" alt=""  class="full-image animated" data-animation-in="zoomInImage" />
+            </div>
+            <div class="slide__content slide__content__left">
+                <div class="slide__content--headings text-left">
+                    <h5  class="animated top-title" data-animation-in="fadeInUp" data-delay-in="0.3">4 NIGHTS /3 DAYS</h5>
+                    <h2 class="animated title" data-animation-in="fadeInUp">THE ICONS OF TASMANIA</h2>
+                    <button  class="btn-light btn button-custom animated" data-animation-in="fadeInUp">Explore Details <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+<div class="container-fluid badge_div ">
+ <img src="{{siteUrl}}assets/icons_logo/branchout-badge.svg" width="20%"> 
+ 
+
+    <div class="container text-center section5">
+    <div class="row">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-8">
+         <h2>READY TO START YOUR ADVENTURE?</h2>
+    <p>Start by picking your desired <u class="dotted">activity</u>, <u class="dotted">destination</u>, <u class="dotted">package</u> or <u class="dotted">contact us</u> and we'll tailor something really special that perfectly suits your needs.</p>
+
+        </div>
+        <div class="col-lg-2">
+        </div>
+    </div>
+   </div> 
+</div>
+
+<footer>
+    <div class="footer-img">
+           <picture>
+                    <source srcset="{{  entry.footer.one().url('footerSvg') }}" media="(min-width: 1000px)">
+                    <source srcset="{{  entry.footer.one().url('footerSvgTablet') }}" media="(max-width: 768px)">
+                    <img class="" src="{{ entry.footer.one().getUrl('footerSvg') }}" alt=""  width="100%">  
+            </picture>
+          
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 footer-col">
+                <ol>
+                    <li>Contact us</li>
+                    <li>Instagram/Facebook</li>
+                    <li>Email Us</li>
+                </ol>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 footer-logo footer-col">
+
+                <img class="banner-img pb-2" src="{{ siteUrl }}assets/icons_logo/branchout-logo.svg" alt="" >
+                
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 footer-col footer-address text-right">
+                <ol>
+                    <li>Level 1, 387 Clarendon Street</li>
+                    <li>South Melbourne</li>
+                    <li>VIC, 3205 AUS</li>
+                </ol>
+            </div>
+            <div class="col-lg-12 copyright">
+             <h5 class="pt-2">© 2019 BRANCH OUT. WEBSITE BY SPICY WEB.</h5>
+             </div>
+        </div>
+       
+    </div>
+</footer>
+
+
+
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://alexandrebuffet.fr/codepen/slider/slick-animation.min.js"></script>
+<script src="{{ siteUrl }}assets/js/owl.carousel.min.js"></script>
+<script>
+   
+/*
+** With Slick Slider Plugin : https://github.com/marvinhuebner/slick-animation
+** And Slick Animation Plugin : https://github.com/marvinhuebner/slick-animation
+*/
+
+// Init slick slider + animation
+$('.slider').slick({
+  autoplay: true,
+  speed: 800,
+  lazyLoad: 'progressive',
+  arrows: false,
+  dots: true,
+
+}).slickAnimation();
+
+
+
+$('.slick-nav').on('click touch', function(e) {
+
+    e.preventDefault();
+
+    var arrow = $(this);
+
+    if(!arrow.hasClass('animate')) {
+        arrow.addClass('animate');
+        setTimeout(() => {
+            arrow.removeClass('animate');
+        }, 1600);
+    }
+
+});
+
+$('.owl-carousel').owlCarousel({
+    stagePadding: 200,
+    loop:true,
+    margin:10,
+    nav:false,
+    items:1,
+    lazyLoad: true,
+    nav:true,
+  responsive:{
+        0:{
+            items:1,
+            stagePadding: 60
+        },
+        600:{
+            items:1,
+            stagePadding: 100
+        },
+        1000:{
+            items:1,
+            stagePadding: 200
+        },
+        1200:{
+            items:1,
+            stagePadding: 250
+        },
+        1400:{
+            items:1,
+            stagePadding: 300
+        }
+       
+    }
+})
+
+$('.owl-carousel-banner').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        }
+    }
+})
+
+</script> 
+</body>
+</html>

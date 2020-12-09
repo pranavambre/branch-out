@@ -1,0 +1,9 @@
+format: null
+handle: footerSvgTablet
+height: 600
+interlace: none
+mode: crop
+name: 'footer svg tablet'
+position: center-center
+quality: null
+width: 767

@@ -1,0 +1,9 @@
+format: jpg
+handle: carouselTransformDesktop
+height: 800
+interlace: none
+mode: crop
+name: 'carousel Transform desktop'
+position: center-center
+quality: 82
+width: 1980

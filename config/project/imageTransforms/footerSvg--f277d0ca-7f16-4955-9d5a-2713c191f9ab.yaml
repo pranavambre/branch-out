@@ -1,0 +1,9 @@
+format: null
+handle: footerSvg
+height: 300
+interlace: none
+mode: crop
+name: footer-svg
+position: center-center
+quality: null
+width: 1400
